@@ -1,0 +1,169 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#tablet,
+#mobile {
+    display: none;
+}
+
+nav {
+    padding: 0 30px;
+}
+
+#nav-logo-container {
+    width: 50px;
+    height: 50px;
+}
+
+#nav-logo {
+    border-radius: 100%;
+    background-color: white;
+}
+
+#nav-title>h1 {
+    font-size: 1.7rem;
+}
+
+#nav-menu {
+    color: white;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+main {
+    height: calc(100vh - 140px);
+    font-size: 1.5rem;
+}
+
+#main-content {
+    width: 90%;
+}
+
+aside {
+    width: 10%;
+    gap: 10px;
+}
+
+.card {
+    border-radius: 10%;
+    margin: 50px 0;
+    width: 200px;
+    height: 200px;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+@media (max-height: 700px) and (max-width: 1054px) {
+
+    body,
+    main {
+        height: auto;
+    }
+
+    .card {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 1054px) {
+    #tablet {
+        display: inline;
+    }
+
+    #nav-logo-container {
+        visibility: hidden;
+    }
+
+    #nav-menu {
+        visibility: visible;
+    }
+
+    #main-content {
+        width: 100%;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        align-items: center;
+        -webkit-align-items: center;
+    }
+
+    aside {
+        display: none !important;
+    }
+
+    .card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .card:nth-child(odd) {
+        margin: 0 10vw 0 0;
+    }
+
+    .card:nth-child(even) {
+        margin: 0 0 0 10vw;
+    }
+}
+
+@media (max-width: 876px) {
+    .card:nth-child(odd) {
+        margin: 0 5vw 0 0;
+    }
+
+    .card:nth-child(even) {
+        margin: 0 0 0 5vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #tablet {
+        display: none;
+    }
+
+    #mobile {
+        display: inline;
+    }
+
+    body {
+        height: auto;
+    }
+
+    #nav-logo-container {
+        display: none;
+    }
+
+    #nav-menu {
+        visibility: hidden;
+    }
+
+    main {
+        height: auto;
+    }
+
+    #main-content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+    }
+
+    .card {
+        margin: 50px 0 !important;
+    }
+
+    .card:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .card {
+        width: 200px;
+        height: 200px;
+    }
+}
